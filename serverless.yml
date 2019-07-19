@@ -1,0 +1,27 @@
+service: email-endpoint
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: production
+  region: eu-west-1
+  timeout: 30
+  environment:
+    EMAIL_ACCOUNT: ${file(./secrets.json):EMAIL_ACCOUNT}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 'ses:SendEmail'
+      Resource: '*'
+
+package:
+ exclude:
+   - .secrets.json
+
+functions:
+  email:
+    handler: handler.email
+    events:
+      - http:
+          path: contact
+          method: post

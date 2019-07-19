@@ -1,0 +1,26 @@
+[
+    {
+        "type": "name",
+        "flag": "gi",
+        "pattern": "^\\w+( \\w+)*$",
+        "message": "Please enter a valid name"
+    },
+    {
+        "type": "email",
+        "flag": "gi",
+        "pattern": "^([A-Z0-9._+]+@[A-Z0-9.-]+.[A-Z]{2,6})$",
+        "message": "Please enter a valid email address"
+    },
+    {
+        "type": "subject",
+        "flag": "g",
+        "pattern": "^(?!\\s*$).+",
+        "message": "Please enter a valid subject"
+    },
+    {
+        "type": "message",
+        "flag": "gm",
+        "pattern": "^(?!\\s*$).+",
+        "message": "Please enter a valid message"
+    }
+]
