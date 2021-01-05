@@ -4,7 +4,7 @@
   "description": "AWS Lamda function behind the API Gateway which processes my portfolio contact form and forwards the form data via AWS SES.",
   "main": "handler.js",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "aws-sdk": "^2.494.0"
   },
   "devDependencies": {},
